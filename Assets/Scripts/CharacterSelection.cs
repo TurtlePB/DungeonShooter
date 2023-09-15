@@ -11,11 +11,10 @@ public class CharacterSelection : MonoBehaviour
     [SerializeField] private Button[] characterButtons;
 
     private GameObject currentCharacter;
-    private int selectedCharacterIndex = -1;
 
     private void Start()
     {
-        UnachievedCharacters();
+        //UnachievedCharacters();
     }
 
     public void SelectCharacter(int characterIndex)
