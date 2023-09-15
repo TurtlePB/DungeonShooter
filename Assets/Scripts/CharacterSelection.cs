@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class CharacterSelection : MonoBehaviour
 {
     [SerializeField] private GameObject[] characterPrefabs;
+    [SerializeField] private GameObject CharHub;
     [SerializeField] private Transform spawnPoint;
     [SerializeField] private Button[] characterButtons;
 
@@ -14,7 +15,7 @@ public class CharacterSelection : MonoBehaviour
 
     private void Start()
     {
-        //UnachievedCharacters();
+        UnachievedCharacters();
     }
 
     public void SelectCharacter(int characterIndex)
@@ -27,6 +28,7 @@ public class CharacterSelection : MonoBehaviour
             }
             
             currentCharacter = Instantiate(characterPrefabs[characterIndex], spawnPoint.position, Quaternion.identity);
+           currentCharacter.transform.parent = CharHub.transform;
         }
     }
 
