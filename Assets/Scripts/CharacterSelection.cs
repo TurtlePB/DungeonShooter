@@ -14,7 +14,7 @@ public class CharacterSelection : MonoBehaviour
 
     private void Start()
     {
-        //UnachievedCharacters();
+        UnachievedCharacters();
     }
 
     public void SelectCharacter(int characterIndex)
